@@ -1,0 +1,43 @@
+@use '../../utils/sass-mixins' as mixins
+
+.wrapper
+	padding: mixins.rem(3)
+	position: relative
+	display: flex
+	align-items: center
+	gap: mixins.rem(4)
+	background-color: #303038
+	border-radius: mixins.rem(16)
+
+.button
+	width: mixins.rem(136)
+	padding: mixins.rem(10)
+	background-color: rgba(255, 255, 255, 0)
+	transition: all .3s
+	border-radius: mixins.rem(12)
+	font-weight: 500
+	font-size: 16px
+	text-align: center
+	z-index: 3
+
+.acive
+	color: #14141a
+
+.indicator
+	position: absolute
+	top: 4px
+	bottom: 4px
+	left: 0
+	height: auto
+	background-color: white
+	border-radius: mixins.rem(12)
+	z-index: 1
+
+// Media
+@media screen and ( max-width: 830px )
+	.button
+		width: mixins.rem(100)
+
+@media screen and ( max-width: 485px )
+	.button
+		width: 50%

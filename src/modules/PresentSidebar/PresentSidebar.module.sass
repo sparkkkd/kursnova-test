@@ -1,0 +1,184 @@
+.overlay
+	position: fixed
+	left: 0
+	top: 0
+	width: 100vw
+	height: 100vh
+	z-index: 1001
+	background-color: rgba(0, 0, 0, 0.7)
+	backdrop-filter: blur(20px)
+
+.close
+	position: absolute
+	right: 54%
+	top: 30px
+	width: 48px
+	height: 48px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 16px
+	border: 1px solid rgba(255, 255, 255, 0.76)
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #fff 100%)
+	z-index: 1002
+
+.closeIcon
+	width: 32px
+	height: 32px
+	path
+		fill: #000
+
+.content
+	padding-top: 30px
+	padding-bottom: 10px
+	padding-left: clamp(1.875rem, 0.1014rem + 4.0541vw, 3.75rem)
+	padding-right: clamp(1.875rem, 0.1014rem + 4.0541vw, 3.75rem)
+	position: absolute
+	right: 0
+	top: 0
+	width: 52%
+	height: 100vh
+	display: flex
+	flex-direction: column
+	align-items: start
+	background: #14141a
+	border-top-left-radius: clamp(0.9375rem, 0.4054rem + 1.2162vw, 1.5rem)
+	border-bottom-left-radius: clamp(0.9375rem, 0.4054rem + 1.2162vw, 1.5rem)
+	overflow-y: scroll
+
+.img
+	width: clamp(15.625rem, 11.4865rem + 9.4595vw, 20rem)
+	height: auto
+
+.title
+	max-width: 568px
+	margin-bottom: 40px
+	font-size: clamp(1.5rem, 1.3333rem + 0.7407vw, 2rem)
+	font-weight: 500
+
+.captionCard
+	margin-bottom: 40px
+	padding: clamp(0.9375rem, 0.4054rem + 1.2162vw, 1.5rem) clamp(1.25rem, 0.5405rem + 1.6216vw, 2rem)
+	display: flex
+	flex-direction: column
+	background: #4b4b55
+	border-radius: 20px
+
+.captionTitle
+	margin-bottom: 10px
+	font-size: clamp(1.125rem, 1.0833rem + 0.1852vw, 1.25rem)
+	font-weight: 500
+
+.captionText
+	font-size: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem)
+
+.form
+	margin-bottom: 12px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	row-gap: 12px
+
+.input
+	background: #303038
+	border-radius: 12px
+	padding: 16px
+	font-size: 18px
+	color: #99a
+	border: none
+	outline: none
+
+.name
+	width: 49%
+
+.phone
+	width: 49%
+
+.mail
+	width: 59%
+
+.error
+	border: 1px solid #9f1e3c
+
+.button
+	width: 39%
+	border-radius: 16px
+	box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 0.68), inset 0 -2px 6px 0 rgba(14, 0, 86, 0.89), 2px 7px 18px 0 rgba(20, 0, 120, 0.4)
+	background: linear-gradient(180deg, #795eff 0%, #4224de 100%)
+	font-weight: 500
+	font-size: 16px
+	text-align: center
+
+.privacy
+	color: #99a
+	font-size: 12px
+	font-weight: 400
+	a
+		color: #fff
+
+.line
+	display: none
+	position: fixed
+	bottom: 5px
+	left: 50%
+	width: 134px
+	height: 5px
+	background: #fff
+	border-radius: 100px
+	transform: translateX(-50%)
+
+// Media
+@media screen and ( max-width: 1096px )
+	.button
+		font-size: 14px
+
+@media screen and ( max-width: 983px )
+	.mail
+		width: 100%
+
+	.button
+		padding: 18px 0px
+		width: 100%
+
+@media screen and ( max-width: 700px )
+	.close
+		left: auto
+		right: 25px
+		top: 12%
+		background: none
+		border: none
+
+	.closeIcon
+		path
+			fill: #fff
+
+	.content
+		padding-bottom: 100px
+		width: 100%
+		height: 90%
+		bottom: 0
+		top: auto
+		border-radius: 0px
+		border-top-left-radius: 24px
+		border-top-right-radius: 24px
+
+	.line
+		display: block
+
+	.title
+		margin-bottom: 20px
+
+	.captionCard
+		margin: 0
+		order: 3
+
+	.privacy
+		margin-bottom: 23px
+
+	.input
+		width: 100%
+		font-size: 16px
+
+@media screen and ( max-width: 500px )
+	.content
+		align-items: center

@@ -1,0 +1,60 @@
+.how
+	margin-top: 65px
+
+.wrapper
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.cards
+	position: relative
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	row-gap: 20px
+
+.title
+	width: 100%
+	margin-bottom: 75px
+	font-size: clamp(2rem, 1.6667rem + 1.4815vw, 3rem)
+	font-weight: 600
+
+.img
+	width: 320px
+	position: absolute
+	left: 0
+	bottom: -135px
+
+// Media
+@media screen and ( max-width: 1100px )
+	.title
+		margin-bottom: 40px
+
+	.img
+		width: 240px
+		bottom: -100px
+
+	.button
+		padding: 15px 35px
+		font-size: 16px
+
+@media screen and ( max-width: 850px )
+	.img
+		bottom: -125px
+
+@media screen and ( max-width: 600px )
+	.title
+		font-weight: 500
+
+@media screen and ( max-width: 560px )
+	.title
+		margin-bottom: 25px
+
+	.img
+		bottom: -190px
+		left: 50%
+		transform: translateX(-50%)
+
+	.button
+		margin-top: 210px

@@ -1,0 +1,33 @@
+.overlay
+	width: 100vw
+	height: 100dvh
+	padding-bottom: env(safe-area-inset-bottom)
+	position: fixed
+	top: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: rgba(0, 0, 0, 0.8)
+	backdrop-filter: blur(8px)
+	z-index: 1000
+	pointer-events: auto
+
+.content
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 101
+
+// Media
+@media screen and ( max-width: 700px )
+	.content
+		padding: 0px 10px
+
+@media screen and ( max-width: 600px )
+	.content
+		padding: 0px
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%

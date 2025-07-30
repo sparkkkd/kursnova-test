@@ -1,0 +1,144 @@
+@use '../../../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.title
+	margin-bottom: 0px
+	font-size: clamp(2rem, 1.6667rem + 1.4815vw, 3rem)
+	font-weight: 600
+
+.content
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-bottom: 80px
+
+.left
+	flex-basis: 30%
+	display: flex
+	flex-direction: column
+	gap: mixins.rem(40)
+
+.stage
+	position: relative
+
+.stageContent
+	max-width: 100%
+	padding-left: mixins.rem(40)
+	display: flex
+	flex-direction: column
+	gap: mixins.rem(10)
+
+.stageIndicator
+	position: absolute
+	width: 7px
+	height: 100%
+	border-radius: mixins.rem(30)
+
+.stageTitle
+	font-size: clamp(1.0625rem, 0.1757rem + 2.027vw, 2rem)
+	font-weight: 500
+
+.stageText
+	font-size: clamp(0.75rem, 0.5135rem + 0.5405vw, 1rem)
+	color: #99a
+	font-weight: 400
+
+.videoWrapper
+	width: 100%
+	display: flex
+	flex-direction: column
+	gap: mixins.rem(40)
+
+.videoCard
+	display: flex
+	flex-direction: column
+
+.videoIcon
+	margin-bottom: mixins.rem(4)
+	width: clamp(2.5rem, 1.0811rem + 3.2432vw, 4rem)
+	height: clamp(2.5rem, 1.0811rem + 3.2432vw, 4rem)
+
+.videoTitle
+	margin-bottom: mixins.rem(4)
+	font-size: clamp(1.25rem, 0.5405rem + 1.6216vw, 2rem)
+	font-weight: 500
+	line-height: 1.2
+
+.videoText
+	max-width: mixins.rem(250)
+	font-weight: 400
+	font-size: clamp(0.8125rem, 0.6351rem + 0.4054vw, 1rem)
+	line-height: 1.5
+	color: #99a
+
+.videoButton
+	margin-top: mixins.rem(8)
+	max-width: max-content
+	padding: mixins.rem(13) mixins.rem(20) mixins.rem(13) mixins.rem(12)
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: mixins.rem(10)
+	font-size: clamp(0.875rem, 0.7568rem + 0.2703vw, 1rem)
+	font-weight: 500
+	backdrop-filter: blur(24px)
+	background: #303038
+	border-radius: mixins.rem(16)
+	img
+		width: clamp(1.125rem, 0.7703rem + 0.8108vw, 1.5rem)
+		height: clamp(1.125rem, 0.7703rem + 0.8108vw, 1.5rem)
+
+.progressWrapper
+	display: flex
+	flex-direction: column
+	gap: mixins.rem(50)
+
+.progressCard
+	display: flex
+	align-items: center
+	gap: 24px
+
+.progressIcon
+	width: 64px
+	height: 64px
+
+.progressTitle
+	max-width: mixins.rem(220)
+	font-size: 14px
+	font-weight: 400
+	line-height: 1.4
+
+.center
+	flex-basis: 30%
+
+.video
+	display: block
+	margin: 0 auto
+	width: auto
+	height: clamp(31.25rem, 21.4358rem + 22.4324vw, 35.625rem)
+	border-radius: 30px
+	border: 0.72px solid #9999aa71
+	object-fit: cover
+
+.sharkWrapper
+	width: 100%
+	height: 100%
+	height: clamp(31.25rem, 21.4358rem + 22.4324vw, 35.625rem)
+	position: relative
+
+.shark
+	position: absolute
+	right: -7%
+	bottom: 7%
+	width: clamp(17.5rem, 1.8328rem + 35.8108vw, 34.0625rem)
+	height: clamp(17.5rem, 1.8328rem + 35.8108vw, 34.0625rem)
+
+.right
+	flex-basis: 30%

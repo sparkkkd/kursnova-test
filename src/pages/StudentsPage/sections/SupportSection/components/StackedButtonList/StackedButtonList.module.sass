@@ -1,0 +1,27 @@
+.wrapper
+	width: 100%
+	height: 200px
+	display: flex
+	justify-content: center
+	align-items: center
+
+.button
+	width: clamp(18.75rem, 16.0417rem + 12.037vw, 26.875rem)
+	position: absolute
+	padding: clamp(1.0625rem, 0.9583rem + 0.463vw, 1.375rem) 0px
+	border-radius: 64px
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+	font-size: clamp(1.125rem, 1rem + 0.5556vw, 1.5rem)
+	font-weight: 500
+
+@media screen and ( max-width: 1050px )
+	.wrapper
+		height: 300px
+
+@media screen and ( max-width: 650px )
+	.wrapper
+		height: 450px
+
+@media screen and ( max-width: 475px )
+	.wrapper
+		height: 500px

@@ -1,0 +1,29 @@
+@use '../../../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	display: flex
+	flex-direction: column
+	justify-content: center
+	gap: mixins.rem(5)
+	font-size: 1rem
+
+.icon
+	max-width: max-content
+	max-height: max-content
+	svg
+		width: mixins.rem(50)
+		height: mixins.rem(50)
+
+.title
+	@include mixins.fluid-text(32, 12)
+	font-weight: 500
+
+.description
+	@include mixins.fluid-text(16, 8)
+	max-width: 20em
+
+@media screen and ( max-width: 950px )
+	.icon
+		svg
+			width: mixins.rem(30)
+			height: mixins.rem(30)

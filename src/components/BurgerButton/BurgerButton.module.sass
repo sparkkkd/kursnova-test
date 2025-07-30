@@ -1,0 +1,37 @@
+@use '../../utils/sass-mixins' as mixins
+
+.burger
+	position: relative
+	width: mixins.rem(40)
+	height: mixins.rem(40)
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	background-color: #fff
+	border-radius: 9999999px
+	transition: background-color .3s
+
+.dots
+	position: absolute
+	left: 50%
+	top: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	gap: mixins.rem(3)
+	transform: translate(-50%, -50%)
+
+.dot
+	width: mixins.rem(6)
+	height: mixins.rem(6)
+	background-color: #000
+	border-radius: 9999999px
+	transition: background-color .3s
+
+// Hover
+@media (hover: hover)
+	.burger:hover
+		background-color: #5735ff
+		.dot
+			background-color: #fff

@@ -1,0 +1,164 @@
+@use '../../../utils/sass-mixins' as mixins
+
+.footer
+	height: 230vh
+	position: relative
+
+.sticky
+	position: sticky
+	top: 0
+	width: 100%
+	height: 100vh
+	max-width: 100%
+	overflow-x: hidden
+
+.horizontalScroll
+	width: max-content
+	will-change: transform
+	height: 100%
+	display: flex
+	align-items: center
+	flex-shrink: 0
+
+.title
+	display: flex
+	flex-wrap: nowrap
+	font-size: 180px
+	font-weight: 600
+	position: relative
+	h2
+		display: flex
+		gap: 150px
+		span
+			white-space: nowrap
+	img
+		position: absolute
+
+.eurica
+	top: 60%
+	left: 15%
+
+.circle
+	top: 84%
+	left: 24%
+
+.horse
+	top: 25%
+	left: 23.7%
+
+.bot
+	top: -8%
+	left: 59.5%
+
+.greenBall
+	top: -7%
+	left: 62.5%
+
+.shark
+	top: 25%
+	left: 60.5%
+
+.star
+	right: -8%
+	top: 12%
+
+.cards
+	position: relative
+	width: 100vw
+	height: 100%
+	margin-left: 340px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.contacts
+	margin-left: 32px
+
+.license
+	width: 100%
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 32px
+
+// Media
+@media screen and ( max-width: 1600px )
+	.title
+		font-size: 100px
+		h2
+			gap: 100px
+		img
+			object-fit: contain
+
+	.eurica
+		width: 200px
+		top: 60%
+		left: 15%
+
+	.circle
+		top: 97%
+		left: 24%
+		height: 80px
+
+	.horse
+		width: 160px
+		top: 19%
+		left: 23.7%
+
+	.bot
+		width: 100px
+		top: -8%
+		left: 60%
+
+	.greenBall
+		width: 80px
+		top: -24%
+		left: 62.8%
+
+	.shark
+		height: 170px
+		top: 18%
+		left: 59.8%
+
+	.star
+		width: 300px
+		right: -11%
+		top: -17%
+
+	.left
+		padding-right: 20px
+
+@media screen and ( max-width: 1200px )
+	.title
+		font-size: 70px
+		h2
+			gap: 70px
+
+	.eurica
+		width: 140px
+
+	.circle
+		height: 55px
+
+	.horse
+		width: 110px
+
+	.bot
+		width: 65px
+
+	.greenBall
+		width: 80px
+		top: -24%
+		left: 62.8%
+
+	.shark
+		height: 125px
+
+	.star
+		width: 230px
+
+	.cards
+		margin-left: 250px

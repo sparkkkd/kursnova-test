@@ -1,0 +1,36 @@
+.splide__slide
+	&:nth-child(even)
+		transform: rotateZ(2deg) translateY(10px)
+	&:nth-child(odd)
+		transform: rotateZ(-2deg) translateY(-10px)
+
+.splide__track
+	padding-top: 15px
+	padding-bottom: 15px
+
+.splide__list
+	display: flex
+	align-items: center
+	overflow: visible !important
+
+.splide__pagination
+	bottom: -25px
+
+.splide__pagination__page
+	background: #ccc
+	border-radius: 9999999px
+	width: 10px
+	height: 10px
+	display: inline-block
+	margin: 0 6px
+	transition: all 0.3s ease
+	&.is-active
+		width: 25px
+
+// Media
+@media screen and ( max-width: 815px )
+	.splide__slide
+		&:nth-child(even)
+			transform: rotateZ(0) translateY(0px)
+		&:nth-child(odd)
+			transform: rotateZ(0) translateY(0px)

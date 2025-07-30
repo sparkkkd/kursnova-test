@@ -1,0 +1,63 @@
+@use '../../../utils/sass-mixins' as mixins
+
+.contacts
+	padding: mixins.rem(32)
+	display: flex
+	flex-direction: column
+	background-color: #25252b
+	border-radius: mixins.rem(32)
+
+.title
+	margin-bottom: mixins.rem(12)
+	font-size: 23px
+	font-weight: 500
+	opacity: 0.5
+
+.mail
+	font-size: 32px
+	font-weight: bold
+
+.links
+	margin-top: mixins.rem(70)
+	display: flex
+	gap: mixins.rem(20)
+
+.link
+	padding: mixins.rem(12) mixins.rem(20)
+	border-radius: mixins.rem(30)
+	font-size: 20px
+	font-weight: 500
+	background-color: #4b4b55
+
+@media screen and ( max-width: 1600px )
+	.contacts
+		padding: 20px
+
+	.title
+		font-size: 18px
+
+	.mail
+		font-size: 24px
+
+	.link
+		padding: 12px 20px
+		font-size: 16px
+
+@media screen and ( max-width: 1200px )
+	.contacts
+		padding: 27px
+		border-radius: 25px
+
+	.title
+		font-size: 16px
+
+	.mail
+		font-size: 19px
+
+	.link
+		padding: 5px 15px
+		font-size: 14px
+
+@media screen and ( max-width: 700px )
+	.links
+		margin-top: mixins.rem(20)

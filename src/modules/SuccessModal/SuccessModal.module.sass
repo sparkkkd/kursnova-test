@@ -1,0 +1,78 @@
+.wrapper
+	padding: 40px 100px
+	max-width: 620px
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	box-shadow: 0 -6px 56px 0 rgba(20, 20, 26, 0.5)
+	background: #25252b
+	border-radius: 24px
+	background-color: #25252b
+
+.close
+	position: absolute
+	right: 24px
+	top: 24px
+	width: 32px
+	height: 32px
+
+.title
+	margin-bottom: 10px
+	font-weight: 500
+	font-size: 24px
+	text-align: center
+
+.text
+	margin-bottom: 40px
+	font-size: 17px
+	text-align: center
+	color: #99a
+
+.button
+	border-radius: 16px
+	padding: 22px 24px
+	backdrop-filter: blur(24px)
+	background-color: #303038
+	font-size: 16px
+	font-weight: 500
+
+// Media
+@media screen and ( max-width: 700px )
+	.wrapper
+		padding: 25px 40px
+
+	.img
+		width: 300px
+
+	.title
+		font-size: 20px
+
+	.text
+		margin-bottom: 25px
+		font-size: 14px
+
+	.button
+		padding: 15px 20px
+		border-radius: 10px
+
+@media screen and ( max-width: 600px )
+	.wrapper
+		border-bottom-left-radius: 0px
+		border-bottom-right-radius: 0px
+
+@media screen and ( max-width: 400px )
+	.img
+		width: 200px
+
+	.title
+		font-size: 17px
+
+	.text
+		margin-bottom: 20px
+		font-size: 12px
+
+	.button
+		padding: 15px
+		font-size: 13px

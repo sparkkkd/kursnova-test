@@ -1,0 +1,26 @@
+.wrapper
+	padding-bottom: 300px
+	position: relative
+	display: flex
+	justify-content: center
+	gap: 36px
+
+.img
+	position: absolute
+	left: -64px
+	bottom: 215px
+	width: clamp(9.375rem, 5.7095rem + 8.3784vw, 13.25rem)
+	height: auto
+	z-index: 2
+
+.arrow
+	position: absolute
+	bottom: clamp(16.0625rem, 14.8768rem + 2.7064vw, 17.3125rem)
+	left: clamp(9.375rem, 4.6321rem + 10.8254vw, 14.375rem)
+	height: auto
+	transform: rotateZ(-15deg)
+
+// Media
+@media screen and ( max-width: 1420px )
+	.img
+		left: 0

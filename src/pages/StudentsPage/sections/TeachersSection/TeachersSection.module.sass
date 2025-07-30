@@ -1,0 +1,20 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.teachers
+	margin-top: mixins.rem(200)
+	height: auto
+
+.mobile
+	display: none !important
+
+// Media
+@media screen and ( max-width: 815px )
+	.desktop
+		display: none !important
+
+	.mobile
+		display: flex !important
+
+@media screen and ( max-width: 460px )
+	.teachers
+		margin-top: 250px

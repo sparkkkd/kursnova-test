@@ -1,0 +1,45 @@
+@use '../../../../../../utils/sass-mixins' as mixins
+
+.item
+	display: flex
+	flex-direction: column
+	border-bottom: 1px solid #7f7f8d
+	padding: 32px 0px
+
+.question
+	display: flex
+	justify-content: space-between
+	align-items: center
+	font-size: clamp(1rem, 0.6667rem + 1.4815vw, 2rem)
+	line-height: 1.25
+	text-align: left
+	transition: all .3s
+	font-weight: 400
+
+.answer
+	overflow: hidden
+	text-align: left
+
+.answerInner
+	padding-top: 16px
+	font-size: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem)
+	line-height: 1.4
+	color: #99a
+
+.icon
+	margin-left: 10px
+
+// Media
+@media screen and ( max-width: 960px )
+	.item
+		padding: 24px 0px
+
+	.answerInner
+		padding-top: 10px
+
+@media screen and ( max-width: 700px )
+	.item
+		padding: 12px 0px
+
+	.answerInner
+		padding-top: 4px

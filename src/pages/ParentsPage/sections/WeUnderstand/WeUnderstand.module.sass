@@ -1,0 +1,23 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	width: 100vw
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+.title
+	max-width: mixins.rem(700)
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	text-align: center
+	column-gap: 10px
+	font-size: clamp(2rem, 0.75rem + 2.5vw, 3rem)
+	font-weight: 500
+
+.button
+	display: flex
+	margin: auto auto mixins.rem(24) auto

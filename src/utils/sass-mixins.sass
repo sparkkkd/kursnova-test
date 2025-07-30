@@ -1,0 +1,39 @@
+@use 'sass:math'
+
+@mixin fluid-text($max: 48, $min: 16)
+	$maxViewportWidth: 1400
+	$minViewportWidth: 360
+
+	$maxSize: math.div($max, 16)
+	$minSize: math.div($min, 16)
+	$maxWidth: math.div($maxViewportWidth, 16)
+	$minWidth: math.div($minViewportWidth, 16)
+
+	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth))
+	$yAxisIntersection: -$minWidth * $slope + $minSize
+
+	font-size: clamp(
+	#{$minSize * 1rem},
+	#{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+	#{$maxSize * 1rem}
+  )
+
+@mixin fluid-width($maxWidthInPx, $minWidthInPx)
+	$maxViewportWidth: 1400
+	$minViewportWidth: 360
+
+	$maxWidth: math.div($maxWidthInPx, 16)
+	$minWidth: math.div($minWidthInPx, 16)
+	$vwScale: math.div(($maxWidth - $minWidth), ($maxViewportWidth - $minViewportWidth)) * 100
+
+	width: clamp(
+	#{$minWidth}rem,
+	#{$minWidth}rem + #{$vwScale}vw,
+	#{$maxWidth}rem
+  )
+
+@function rem($pixel)
+	@if math.is-unitless($pixel)
+		@return math.div($pixel, 16) + rem
+	@else
+		@error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'

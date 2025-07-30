@@ -1,0 +1,90 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	height: 300vh
+	position: relative
+
+.section
+	position: sticky
+	top: 0
+	height: auto
+
+.container
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+
+.title
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	column-gap: clamp(0.5rem, 0.148rem + 1.2245vw, 1.25rem)
+	max-width: mixins.rem(840)
+	font-size: clamp(2rem, 1.5306rem + 1.6327vw, 3rem)
+	text-align: center
+	line-height: 1
+	font-weight: 500
+
+.subtitleWrapper
+	margin-top: mixins.rem(150)
+
+.subtitle
+	max-width: mixins.rem(600)
+	font-weight: 500
+
+.cofeeWrapper
+	position: relative
+
+.marshmallow
+	position: absolute
+
+.marshmallow_1
+	bottom: 34%
+	left: -10%
+
+.marshmallow_2
+	bottom: 45%
+	right: -11%
+
+.marshmallow_3
+	bottom: 19%
+	left: 6%
+
+.button
+	position: absolute
+	bottom: mixins.rem(24)
+	left: 50%
+	transform: translateX(-50%)
+
+// Media
+@media screen and ( max-width: 900px )
+	.coffeeImg
+		width: 400px
+
+	.marshmallow_1, .marshmallow_2
+		width: 115px
+
+	.marshmallow_3
+		width: 60px
+
+@media screen and ( max-width: 550px )
+	.coffeeImg
+		width: 300px
+
+	.marshmallow_1, .marshmallow_2
+		width: 80px
+
+	.marshmallow_3
+		width: 45px
+
+	.button
+		width: 90% !important
+
+@media screen and ( max-width: 385px )
+	.marshmallow_1, .marshmallow_2
+		width: 65px
+
+	.marshmallow_2
+		right: -5%

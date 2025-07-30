@@ -1,0 +1,16 @@
+@use '../../utils/sass-mixins' as mixins
+
+.tag
+	padding: mixins.rem(5) mixins.rem(12)
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #25252b
+	border-radius: mixins.rem(16)
+	font-size: 14px
+	font-weight: 400
+
+// Media
+@media screen and ( max-width: 1400px )
+	.tag
+		font-size: 12px

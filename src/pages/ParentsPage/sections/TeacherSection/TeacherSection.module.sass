@@ -1,0 +1,52 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.section
+	position: relative
+
+.mobile
+	display: none
+
+.titleWrapper
+	display: none
+	flex-direction: column
+	align-items: center
+
+.title
+	margin-bottom: mixins.rem(16)
+	font-weight: 600
+	font-size: clamp(2rem, 1.6044rem + 1.7582vw, 2.5rem)
+	text-align: center
+
+.subtitle
+	font-size: clamp(1rem, 0.8022rem + 0.8791vw, 1.25rem)
+	text-align: center
+	max-width: mixins.rem(510)
+
+// Media
+@media screen and ( max-width: 815px )
+	.section
+		margin-top: mixins.rem(120)
+
+	.titleWrapper
+		display: flex
+
+	.slider
+		margin-top: 25px
+
+	.mobile
+		display: block
+
+	.desktop
+		display: none !important
+
+@media screen and ( max-width: 650px )
+	.titleWrapper
+		align-items: start
+
+	.title
+		text-align: left
+
+	.subtitle
+		max-width: mixins.rem(340)
+		text-align: left
+		line-height: 1.5

@@ -1,0 +1,122 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.intro
+	max-width: 100vw
+	width: 100vw
+	height: 100vh
+	min-height: 100vh
+	position: relative
+	display: flex
+	align-items: center
+	overflow: hidden
+
+.wrapper
+	z-index: 2
+
+.video
+	position: absolute
+	right: 0
+	top: 0
+	height: 100%
+	width: auto
+	object-fit: cover
+
+.safari, .chrome
+	display: none
+
+.mobileImg
+	display: none
+
+.title
+	font-size: clamp(2.5rem, 1.8333rem + 2.963vw, 4.5rem)
+	line-height: 1.1
+	font-weight: 600
+
+.button
+	padding: mixins.rem(24)
+	display: none
+	border-radius: mixins.rem(64)
+	width: clamp(22.5rem, 31.0227rem + -13.6364vw, 18.75rem)
+	font-size: 20px
+	font-weight: 500
+	backdrop-filter: blur(48px)
+	background: rgba(255, 255, 255, 0.1)
+
+// Media
+@media screen and ( max-width: 1575px )
+	.video
+		right: -10%
+
+@media screen and ( max-width: 1255px )
+	.video
+		right: -20%
+
+@media screen and ( max-width: 1122px )
+	.video
+		right: -25%
+
+@media screen and ( max-width: 1060px )
+	.video
+		right: -30%
+
+@media screen and ( max-width: 1000px )
+	.intro
+		padding-top: mixins.rem(200)
+		height: auto
+		flex-direction: column
+
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	.title
+		text-align: center
+
+	.video
+		display: none
+
+	.imageWrapper
+		width: 100%
+		overflow: hidden
+
+	.mobileImg
+		margin-left: mixins.rem(-20)
+		display: block
+		width: 110%
+		object-fit: cover
+
+@media screen and ( max-width: 680px )
+	.mobileImg
+		margin-left: mixins.rem(-10)
+
+@media screen and ( max-width: 600px )
+	.intro
+		padding-top: 100px
+
+	.wrapper
+		align-items: start
+
+	.title
+		text-align: left
+		letter-spacing: 0.6px
+		line-height: 1
+
+	.button
+		display: none
+		// margin-top: 24px
+		// padding: 13px 24px
+		// display: block
+		// width: max-content
+		// font-size: 16px
+		// font-weight: 500
+
+	.mobileImg
+		margin-top: 40px
+		width: 115%
+		margin-left: -5%
+
+// Media
+@media screen and ( max-width: 485px )
+	.intro
+		padding-top: 170px

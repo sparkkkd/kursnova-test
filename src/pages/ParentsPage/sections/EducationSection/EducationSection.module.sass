@@ -1,0 +1,38 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.section
+	margin-top: mixins.rem(144)
+	position: relative
+
+.sectionTitle
+	margin-bottom: 25px
+	font-size: clamp(2rem, 1.6667rem + 1.4815vw, 3rem)
+	font-weight: 600
+
+.inner
+	height: 250vh
+	position: relative
+
+.sticky
+	position: sticky
+	top: 0px
+	height: 100vh
+	overflow: hidden
+
+.mobile
+	display: none !important
+
+// Media
+@media screen and ( max-width: 700px )
+	.desktop
+		display: none !important
+
+	.mobile
+		display: flex !important
+
+	.sticky
+		height: auto
+		top: 100px
+
+	.sectionTitle
+		font-weight: 500

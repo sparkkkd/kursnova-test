@@ -1,0 +1,66 @@
+@use '../../../utils/sass-mixins' as mixins
+
+.card
+	padding: mixins.rem(30)
+	display: flex
+	flex-direction: column
+	width: 700px
+	height: 270px
+	color: #000
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center center
+
+.title
+	margin-bottom: 12px
+	font-size: 32px
+	font-weight: bold
+
+.text
+	margin-bottom: 25px
+	font-size: 24px
+	line-height: 28px
+
+.links
+	margin-top: auto
+	display: flex
+	align-items: center
+	gap: 10px
+
+.link
+	padding: 12px 20px
+	font-size: 20px
+	border-radius: 30px
+	background-color: #fff
+
+@media screen and ( max-width: 1600px )
+	.card
+		width: 615px
+		height: 240px
+
+	.title
+		font-size: 28px
+
+	.text
+		font-size: 20px
+		line-height: 24px
+
+	.link
+		font-size: 16px
+
+@media screen and ( max-width: 1200px )
+	.card
+		padding: 20px
+		width: 540px
+		height: 200px
+
+	.title
+		font-size: 24px
+
+	.text
+		font-size: 18px
+		line-height: 22px
+
+	.link
+		padding: 5px 15px
+		font-size: 14px

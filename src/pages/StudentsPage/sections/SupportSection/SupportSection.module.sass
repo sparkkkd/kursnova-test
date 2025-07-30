@@ -1,0 +1,61 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.section
+	position: relative
+
+.inner
+	height: 250vh
+	position: relative
+
+.sticky
+	position: sticky
+	top: 0
+	height: 100vh
+	overflow: hidden
+
+.caption
+	margin-bottom: 12px
+	font-size: 20px
+	line-height: 1.4
+	font-weight: 400
+
+.title
+	padding: 0px 20px
+	margin: 0 auto
+	max-width: 700px
+	font-size: clamp(2rem, 1.6667rem + 1.4815vw, 3rem)
+	font-weight: 500
+	text-align: center
+	letter-spacing: 0.5px
+
+.content
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+	perspective: 1000px
+
+.imagesWrapper
+	position: absolute
+	top: 30%
+	width: clamp(22.5rem, 13.3333rem + 40.7407vw, 50rem)
+	height: 600px
+
+@media screen and ( max-width: 1050px )
+	.imagesWrapper
+		width: 450px
+		height: 400px
+		top: 33%
+
+@media screen and ( max-width: 600px )
+	.caption
+		display: none
+
+@media screen and ( max-width: 460px )
+	.section
+		margin-top: 100px
+
+	.imagesWrapper
+		width: 350px

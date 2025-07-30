@@ -1,0 +1,20 @@
+@use '../../utils/sass-mixins' as mixins
+
+.button
+	padding: clamp(0.8125rem, 0.6161rem + 0.9821vw, 1.5rem) clamp(1.25rem, 0.1786rem + 5.3571vw, 5rem)
+	width: max-content
+	position: fixed
+	bottom: 20px
+	left: 50%
+	z-index: 200
+	backdrop-filter: blur(48px)
+	border-radius: mixins.rem(32)
+	background: rgba(255, 255, 255, 0.1)
+	font-size: clamp(1rem, 0.6875rem + 0.625vw, 1.25rem)
+	font-weight: 500
+	text-align: center
+
+// Media
+@media screen and ( max-width: 460px )
+	.button
+		width: 90%

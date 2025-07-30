@@ -1,0 +1,65 @@
+@use '../../../utils/sass-mixins' as mixins
+
+.footer
+	margin-top: mixins.rem(150)
+
+.wrapper
+	padding-bottom: 32px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.title
+	position: relative
+	font-size: 56px
+	line-height: mixins.rem(45)
+	text-align: center
+	img
+		position: absolute
+		object-fit: contain
+
+.bot
+	left: mixins.rem(-20)
+	top: mixins.rem(-35)
+	width: 90px
+
+.greenBall
+	left: mixins.rem(160)
+	top: mixins.rem(30)
+	width: 90px
+
+.eurica
+	left: mixins.rem(10)
+	bottom: mixins.rem(-55)
+	width: 120px
+
+.horse
+	right: mixins.rem(-14)
+	bottom: mixins.rem(-70)
+	width: 100px
+
+.card
+	margin-top: 160px
+	width: 325px
+	height: 214px
+	border-radius: 30px
+
+.contacts
+	margin-top: 15px
+	width: 325px
+
+.license
+	margin-top: 40px
+	margin-left: auto
+	margin-right: auto
+
+// Media
+@media screen and ( max-width: 350px )
+	.card
+		width: 310px
+		height: 189px
+		background-size: cover
+
+	.contacts
+		width: 310px

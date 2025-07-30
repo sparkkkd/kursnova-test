@@ -1,0 +1,40 @@
+@use '../../../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	width: 100%
+	margin-top: mixins.rem(75)
+
+.controls
+	padding: 0px mixins.rem(10)
+	margin-top: mixins.rem(40)
+	display: flex
+	gap: mixins.rem(12)
+	button
+		padding: mixins.rem(12) mixins.rem(24)
+		backdrop-filter: blur(24px)
+		background-color: #303038
+		border-radius: mixins.rem(16)
+		font-size: 16px
+		transition: all .3s
+		&:active
+			transform: scale(1.1)
+
+// Hover
+@media (hover:hover)
+	.controls
+		button
+			&:hover
+				background-color: #1c1c20
+
+// Media
+@media screen and ( max-width: 1400px )
+	.wrapper
+		margin-top: 50px
+
+@media screen and ( max-width: 815px )
+	.wrapper
+		margin-top: mixins.rem(50)
+
+@media screen and ( max-width: 430px )
+	.wrapper
+		width: 100%

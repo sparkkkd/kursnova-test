@@ -1,0 +1,35 @@
+@use '../../../../../../utils/sass-mixins' as mixins
+
+.teachers
+	margin-top: mixins.rem(100)
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.title
+	margin-left: auto
+	margin-right: auto
+	max-width: 800px
+	margin-bottom: mixins.rem(15)
+	@include mixins.fluid-text(72, 40)
+	font-weight: bold
+	text-align: center
+
+.subtitle
+	display: block
+	margin: 0px auto
+	width: mixins.rem(400)
+	line-height: mixins.rem(32)
+	@include mixins.fluid-text(20, 16)
+	text-align: center
+
+// Media
+@media screen and ( max-width: 815px )
+	.subtitle
+		width: auto
+		line-height: 1.5
+
+@media screen and ( max-width: 600px )
+	.title
+		font-weight: 500

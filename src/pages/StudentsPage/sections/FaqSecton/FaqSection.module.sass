@@ -1,0 +1,44 @@
+@use '../../../../utils/sass-mixins' as mixins
+
+.wrapper
+	position: relative
+	display: flex
+	justify-content: space-between
+
+.title
+	position: absolute
+	left: 0
+	top: 0
+	text-align: center
+	font-size: clamp(2rem, 1.6667rem + 1.4815vw, 3rem)
+	font-weight: 550
+
+.list
+	width: 50%
+	margin-left: auto
+
+// Media
+@media screen and ( max-width: 960px )
+	.wrapper
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	.title
+		position: static
+
+	.list
+		margin: 0
+		width: 100%
+		li:nth-child(1)
+			button
+				padding-top: 32px
+
+@media screen and ( max-width: 700px )
+	.wrapper
+		margin-top: 150px
+
+@media screen and ( max-width: 600px )
+	.title
+		width: 100%
+		text-align: left
