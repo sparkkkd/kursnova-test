@@ -15,6 +15,7 @@ interface TeacherCardProps {
 	tags: string[]
 	name: string
 	description: string
+	mobileDescription: string
 	info: ICountHover[]
 }
 
@@ -24,12 +25,13 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 	img,
 	name,
 	description,
+	mobileDescription,
 	info,
 }) => {
 	const { width } = useWindowSize()
 	const [isHover, setIsHover] = useState<boolean>(false)
 
-	const [firstName, lastName] = name.split(' ')
+	// const [firstName, lastName] = name.split(' ')
 
 	return (
 		<>
@@ -41,7 +43,7 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 							<Tag key={index}>{tag}</Tag>
 						))}
 					</div>
-					<div className={styles.mobileDescription}>{description}</div>
+					<div className={styles.mobileDescription}>{mobileDescription}</div>
 				</div>
 			)}
 
@@ -69,7 +71,8 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 				<div className={styles.wrapper}>
 					{width > 600 && (
 						<div className={styles.name}>
-							{firstName} <br /> {lastName}
+							{/* {firstName} <br /> {lastName} */}
+							{name}
 						</div>
 					)}
 

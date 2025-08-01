@@ -1,13 +1,21 @@
 .list
-	display: flex
-	align-items: center
-	gap: 24px
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	column-gap: 72px
+	row-gap: 8px
 
 .item
 	font-size: 12px
 	color: #99a
+	width: max-content
 
 // Media
+@media screen and ( max-width: 800px )
+	.list
+		display: flex
+		align-items: center
+		gap: 24px
+
 @media screen and ( max-width: 700px )
 	.list
 		flex-direction: column

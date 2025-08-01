@@ -40,5 +40,5 @@ export default defineConfig({
 	server: {
 		host: true,
 	},
-	base: '/kursnova-tech/',
+	base: '/kursnova-test/',
 })

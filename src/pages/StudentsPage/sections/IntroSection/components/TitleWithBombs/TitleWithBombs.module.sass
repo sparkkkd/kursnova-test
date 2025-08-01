@@ -75,10 +75,28 @@
 .bomb_1
 	left: -45px
 	bottom: -123px
+	animation: bomb_animation_1 2s ease-in-out infinite
 
 .bomb_2
 	right: -32px
 	top: -117px
+	animation: bomb_animation_2 3s ease-in-out infinite
+
+@keyframes bomb_animation_1
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(20px)
+	100%
+		transform: translateY(0px)
+
+@keyframes bomb_animation_2
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(-20px)
+	100%
+		transform: translateY(0px)
 
 // Media
 @media screen and ( max-width: 1100px )

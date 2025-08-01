@@ -130,7 +130,7 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 const TASK_DESCRIPTIONS = [
 	{
 		icon: <DumbbelIcon />,
-		title: '1 000+ заданий',
+		title: '6 000+ заданий',
 		description: (
 			<>
 				уже есть на платформе. <br /> Регулярно пополняем базу
@@ -139,11 +139,11 @@ const TASK_DESCRIPTIONS = [
 	},
 	{
 		icon: <BackPackIcon />,
-		title: '3 предмета',
+		title: '5 предметов',
 		description: (
 			<>
-				уже в доступе математика, <br /> химия и биология. Вся школьная
-				программа будет в сентябре
+				уже в доступе математика, алгебра, геометрия, вероятность и статистика,
+				биология. Вся школьная программа будет в сентябре
 			</>
 		),
 	},

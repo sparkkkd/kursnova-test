@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from './store/hooks'
 import { setIsModalOpen, setIsCanAddSection } from './store/slices/uiSlice'
 import { ReactLenis, useLenis } from 'lenis/react'
 
+import { Container } from './components/Container/Container'
 import { Header } from './modules/Header/Header'
 import { Footer } from './modules/Footer/Footer'
 import { Sidebar } from './modules/Sidebar/Sidebar'
@@ -9,15 +11,13 @@ import { StudentsPage } from './pages/StudentsPage/StudentsPage'
 import { ParentsPage } from './pages/ParentsPage/ParentsPage'
 
 import { TryButton } from './modules/TryButton/TryButton'
+import { MobileTryButton } from './modules/MobileTryButton/MobileTryButton'
 import { Modal } from './modules/Modal/Modal'
 import { TryForm } from './modules/TryForm/TryForm'
 import { SuccessModal } from './modules/SuccessModal/SuccessModal'
-import { useEffect } from 'react'
 import { SwitchMode } from './modules/SwitchMode/SwitchMode'
 
 import styles from './App.module.sass'
-import { Container } from './components/Container/Container'
-import { MobileTryButton } from './modules/MobileTryButton/MobileTryButton'
 
 function App() {
 	const { mode, isModalSuccess } = useAppSelector((state) => state.uiReducer)

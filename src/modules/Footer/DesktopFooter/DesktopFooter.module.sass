@@ -62,27 +62,26 @@
 	right: -8%
 	top: 12%
 
-.cards
-	position: relative
+.screen
+	padding: 0px 32px
 	width: 100vw
 	height: 100%
 	margin-left: 340px
 	display: flex
-	align-items: center
 	justify-content: center
+	flex-direction: column
+
+.screenTop
+	margin: auto 0px
+	display: flex
+	justify-content: center
+	align-items: center
 
 .contacts
-	margin-left: 32px
+	margin-left: clamp(3.125rem, 0.1607rem + 6.7659vw, 6.25rem)
 
 .license
-	width: 100%
-	flex-wrap: wrap
-	justify-content: center
-	align-items: center
-	position: absolute
-	left: 50%
-	transform: translateX(-50%)
-	bottom: 32px
+	width: 50%
 
 // Media
 @media screen and ( max-width: 1600px )
@@ -162,3 +161,10 @@
 
 	.cards
 		margin-left: 250px
+
+@media screen and ( max-width: 800px )
+	.license
+		width: 100%
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center

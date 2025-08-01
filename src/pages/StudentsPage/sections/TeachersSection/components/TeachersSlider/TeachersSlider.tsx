@@ -24,11 +24,11 @@ export const TeachersSlider: FC<TeachersSliderProps> = ({ className, y }) => {
 
 	const options = {
 		perPage: 4,
-		gap: width > 430 ? 0 : 40,
+		gap: 10,
 		arrows: false,
 		pagination: width < 815 ? true : false,
 		breakpoints: {
-			1068: {
+			1096: {
 				perPage: 3,
 			},
 			815: {

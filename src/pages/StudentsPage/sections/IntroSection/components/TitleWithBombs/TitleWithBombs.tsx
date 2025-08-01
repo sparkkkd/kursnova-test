@@ -5,9 +5,9 @@ import clsx from 'clsx'
 
 import { ScrollDown } from '../../../../../../components/ScrollDown/ScrollDown'
 
-// import BombImage_1 from '../../../../../../assets/students/intro/bomb-1.png'
-// import BombImage_2 from '../../../../../../assets/students/intro/bomb-2.png'
-import { MobileBombsAnimation } from '../MobileBombsAnimation/MobileBombsAnimation'
+import BombImage_1 from '../../../../../../assets/students/intro/bomb-1.png'
+import BombImage_2 from '../../../../../../assets/students/intro/bomb-2.png'
+// import { MobileBombsAnimation } from '../MobileBombsAnimation/MobileBombsAnimation'
 
 import styles from './TitleWithBombs.module.sass'
 
@@ -34,7 +34,7 @@ export const TitleWithBombs: FC<TitleWithBombsProps> = ({ className }) => {
 					<div>не проблема</div>
 					<div className={styles.tag}>С kursnova</div>
 
-					{/* {width <= 815 && (
+					{width <= 815 && (
 						<>
 							<motion.img
 								className={clsx(styles.bomb, styles.bomb_1)}
@@ -53,11 +53,11 @@ export const TitleWithBombs: FC<TitleWithBombsProps> = ({ className }) => {
 								transition={{ duration: 0.3, delay: 0.4 }}
 							/>
 						</>
-					)} */}
+					)}
 				</motion.h1>
 			</div>
 
-			{width <= 815 && <MobileBombsAnimation />}
+			{/* {width <= 815 && <MobileBombsAnimation />} */}
 
 			{width > 815 && (
 				<video className={styles.video} autoPlay muted preload='auto'>

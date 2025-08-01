@@ -16,10 +16,10 @@ export const FooterLicense: FC<FooterLicenseProps> = ({
 	isMobile,
 }) => {
 	return (
-		<motion.div
+		<motion.ul
 			className={clsx(styles.list, className)}
-			initial={!isMobile ? { opacity: 0, x: '-50%' } : { opacity: 0, y: 100 }}
-			whileInView={!isMobile ? { opacity: 1, x: '-50%' } : { opacity: 1, y: 0 }}
+			initial={!isMobile ? { opacity: 0 } : { opacity: 0, y: 100 }}
+			whileInView={!isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
 			transition={{ duration: 0.3 }}
 			viewport={{ once: true, amount: 0.5 }}
 		>
@@ -30,6 +30,6 @@ export const FooterLicense: FC<FooterLicenseProps> = ({
 					</motion.li>
 				)
 			})}
-		</motion.div>
+		</motion.ul>
 	)
 }

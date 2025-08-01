@@ -11,7 +11,7 @@ interface IInitialState {
 }
 
 const initialState: IInitialState = {
-	mode: 'students',
+	mode: 'parents',
 	isModalOpen: false,
 	isModalSuccess: false,
 	isSidebarOpen: false,

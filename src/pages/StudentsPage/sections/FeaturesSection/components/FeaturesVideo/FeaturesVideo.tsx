@@ -156,7 +156,7 @@ export const FeaturesVideo: FC<FeaturesVideoProps> = ({ className }) => {
 const FEATURES_DESCRIPTIONS: FeaturesDescriptionProps[] = [
 	{
 		icon: <EyeIcon />,
-		title: 'Более 300 видео',
+		title: 'Более 400 видео',
 		description: 'на нашей платформе',
 	},
 	{

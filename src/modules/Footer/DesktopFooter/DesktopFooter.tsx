@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 import { FooterCard } from '../FooterCard/FooterCard'
-import { FooterContacts } from '../FooterContacts/FooterContacts'
 import { FooterLicense } from '../FooterLicense/FooterLicense'
 
 import Eurica from '../../../assets/common/footer/eurica.png'
@@ -15,6 +14,7 @@ import GreenBall from '../../../assets/common/footer/green-ball.png'
 import Star from '../../../assets/common/footer/star.png'
 
 import styles from './DesktopFooter.module.sass'
+import { FooterContactsDesktop } from '../FooterContactsDesktop/FooterContactsDesktop'
 
 interface FooterProps {
 	className?: string
@@ -72,9 +72,12 @@ export const DesktopFooter: FC<FooterProps> = ({ className }) => {
 						<img className={styles.shark} src={Shark} alt='Shark' />
 						<img className={styles.star} src={Star} alt='Star' />
 					</div>
-					<div className={styles.cards}>
-						<FooterCard className={styles.card} />
-						<FooterContacts className={styles.contacts} />
+					<div className={styles.screen}>
+						<div className={styles.screenTop}>
+							<FooterCard className={styles.card} />
+							<FooterContactsDesktop className={styles.contacts} />
+						</div>
+
 						<FooterLicense isMobile={false} className={styles.license} />
 					</div>
 				</motion.div>
