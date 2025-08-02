@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { LICENSE_ITEMS } from '../constants'
 
 import styles from './FooterLicense.module.sass'
+import { Link } from 'react-router-dom'
 
 interface FooterLicenseProps {
 	className?: string
@@ -23,10 +24,10 @@ export const FooterLicense: FC<FooterLicenseProps> = ({
 			transition={{ duration: 0.3 }}
 			viewport={{ once: true, amount: 0.5 }}
 		>
-			{LICENSE_ITEMS.map((item, index) => {
+			{LICENSE_ITEMS.map(({ path, title }, index) => {
 				return (
 					<motion.li key={index} className={styles.item}>
-						<a href='#'>{item}</a>
+						<Link to={path}>{title}</Link>
 					</motion.li>
 				)
 			})}

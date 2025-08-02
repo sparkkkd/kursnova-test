@@ -1,4 +1,4 @@
-import { useState, type FC } from 'react'
+import { useEffect, useRef, useState, type FC } from 'react'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 
@@ -14,6 +14,14 @@ interface IntroSectionProps {
 
 export const IntroSection: FC<IntroSectionProps> = ({ className }) => {
 	const [isVideoReady, setIsVideoReady] = useState<boolean>(false)
+	const videoRef = useRef<HTMLVideoElement | null>(null)
+
+	useEffect(() => {
+		if (videoRef.current) {
+			setIsVideoReady(false)
+			videoRef.current.load()
+		}
+	}, [])
 
 	return (
 		<section className={clsx(styles.intro, className)}>
@@ -34,6 +42,7 @@ export const IntroSection: FC<IntroSectionProps> = ({ className }) => {
 
 			<motion.video
 				className={styles.video}
+				ref={videoRef}
 				autoPlay
 				muted
 				preload='auto'

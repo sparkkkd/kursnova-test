@@ -15,7 +15,7 @@ export const VIDEO_SIDE = [
 	{
 		id: v4(),
 		icon: EyesIcon,
-		title: '25–40 минут',
+		title: '20-30 минут',
 		text: 'среднее время концентрации ребенка',
 	},
 	{

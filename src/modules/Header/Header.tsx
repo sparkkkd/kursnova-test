@@ -12,6 +12,7 @@ import styles from './Header.module.sass'
 
 interface HeaderProps {
 	className?: string
+	backButton?: boolean
 }
 
 export const Header: FC<HeaderProps> = ({ className }) => {
