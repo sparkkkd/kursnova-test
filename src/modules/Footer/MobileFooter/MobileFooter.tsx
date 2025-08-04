@@ -147,6 +147,8 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
 					</motion.div>
 
 					<FooterLicense isMobile className={styles.license} />
+
+					<div className={styles.copyright}>© ООО «КУРСНОВА»</div>
 				</div>
 			</Container>
 		</div>

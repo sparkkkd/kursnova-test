@@ -79,6 +79,8 @@ export const DesktopFooter: FC<FooterProps> = ({ className }) => {
 						</div>
 
 						<FooterLicense isMobile={false} className={styles.license} />
+
+						<div className={styles.copyright}>© ООО «КУРСНОВА»</div>
 					</div>
 				</motion.div>
 			</div>
