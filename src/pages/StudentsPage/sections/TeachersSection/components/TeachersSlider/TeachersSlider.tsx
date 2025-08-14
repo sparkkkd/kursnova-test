@@ -26,6 +26,7 @@ export const TeachersSlider: FC<TeachersSliderProps> = ({ className, y }) => {
 		perPage: 4,
 		gap: 10,
 		arrows: false,
+		padding: { left: '40px', right: 0 },
 		pagination: width < 815 ? true : false,
 		breakpoints: {
 			1096: {
@@ -34,6 +35,7 @@ export const TeachersSlider: FC<TeachersSliderProps> = ({ className, y }) => {
 			815: {
 				perPage: 1,
 				isNavigation: false,
+				padding: { left: '0px', right: 0 },
 			},
 		},
 	}

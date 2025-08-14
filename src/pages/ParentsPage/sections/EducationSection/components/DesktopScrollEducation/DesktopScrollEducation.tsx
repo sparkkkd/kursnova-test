@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import { Container } from '../../../../../../components/Container/Container'
 
 import SharkImg from '../../../../../../assets/parents/education/education-shark.png'
-import PlayIcon from '../../../../../../assets/common/icons/play-icon.svg'
+// import PlayIcon from '../../../../../../assets/common/icons/play-icon.svg'
 
 import {
 	EDUCATION_VIDEOS,
@@ -158,11 +158,12 @@ export const DesktopScrollEducation: FC<DesktopScrollEducationProps> = ({
 										</motion.div>
 									)
 								})}
-
+								{/* Don't delete */}
+								{/* 
 								<button className={styles.videoButton}>
 									<img src={PlayIcon} alt='' />
 									<div>Смотреть пример</div>
-								</button>
+								</button> */}
 							</motion.div>
 						)}
 

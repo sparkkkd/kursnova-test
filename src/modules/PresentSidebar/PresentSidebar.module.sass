@@ -7,6 +7,8 @@
 	z-index: 1001
 	background-color: rgba(0, 0, 0, 0.7)
 	backdrop-filter: blur(20px)
+	display: flex
+	justify-content: flex-end
 
 .close
 	position: absolute
@@ -44,7 +46,9 @@
 	background: #14141a
 	border-top-left-radius: clamp(0.9375rem, 0.4054rem + 1.2162vw, 1.5rem)
 	border-bottom-left-radius: clamp(0.9375rem, 0.4054rem + 1.2162vw, 1.5rem)
-	overflow-y: scroll
+	overflow-y: auto
+	touch-action: auto
+	overscroll-behavior: contain
 
 .img
 	width: clamp(15.625rem, 11.4865rem + 9.4595vw, 20rem)
@@ -182,3 +186,8 @@
 @media screen and ( max-width: 500px )
 	.content
 		align-items: center
+
+@media screen and ( max-width: 400px )
+	.close
+		width: 24px
+		height: 24px

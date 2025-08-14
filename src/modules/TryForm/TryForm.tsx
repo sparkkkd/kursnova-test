@@ -6,9 +6,12 @@ import { tryFormSchema, type tryFormValues } from './tryForm.schema'
 import { useAppDispatch } from '../../store/hooks'
 import { setIsModalOpen, setIsModalSuccess } from '../../store/slices/uiSlice'
 
+import { InputMask } from '@react-input/mask'
+
 import CloseIcon from '../../assets/close.svg?react'
 
 import styles from './TryForm.module.sass'
+import { Link } from 'react-router-dom'
 
 interface TryFormProps {
 	className?: string
@@ -70,10 +73,11 @@ export const TryForm: FC<TryFormProps> = ({ className }) => {
 				</div>
 
 				<div className={styles.field}>
-					<input
-						type='text'
-						className={styles.input}
+					<InputMask
+						mask='+7 (___) ___ __ __'
+						replacement={{ _: /\d/ }}
 						{...register('phone')}
+						className={styles.input}
 						placeholder='Телефон'
 					/>
 					{errors.phone && (
@@ -129,8 +133,11 @@ export const TryForm: FC<TryFormProps> = ({ className }) => {
 			</button>
 
 			<span className={styles.privacy}>
-				Нажимая на кнопку, вы соглашаетесь с <a href='#'>условиями</a> сбора и
-				обработки данных
+				Нажимая на кнопку, вы соглашаетесь с{' '}
+				<Link to='/personal-data' target='_blank'>
+					условиями
+				</Link>{' '}
+				сбора и обработки данных
 			</span>
 		</form>
 	)

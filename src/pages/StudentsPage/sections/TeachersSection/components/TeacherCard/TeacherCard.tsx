@@ -31,8 +31,6 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 	const { width } = useWindowSize()
 	const [isHover, setIsHover] = useState<boolean>(false)
 
-	// const [firstName, lastName] = name.split(' ')
-
 	return (
 		<>
 			{width <= 600 && (
@@ -58,6 +56,7 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 					className={styles.img}
 					style={{ backgroundImage: `url(${img})` }}
 				></div>
+				<div className={styles.overlay}></div>
 				<AnimatePresence>
 					{isHover && width > 600 && (
 						<HoverCard
@@ -69,12 +68,7 @@ export const TeacherCard: FC<TeacherCardProps> = ({
 					)}
 				</AnimatePresence>
 				<div className={styles.wrapper}>
-					{width > 600 && (
-						<div className={styles.name}>
-							{/* {firstName} <br /> {lastName} */}
-							{name}
-						</div>
-					)}
+					{width > 600 && <div className={styles.name}>{name}</div>}
 
 					{width > 600 && (
 						<div className={styles.tags}>

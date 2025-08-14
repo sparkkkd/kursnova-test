@@ -25,15 +25,22 @@ export const FooterCard: FC<FooterCardProps> = ({
 			}}
 		>
 			<img src={HandsImg} className={styles.hands} alt='' />
-			<div className={styles.title}>vkurse</div>
 			<div className={styles.text}>
-				В курсе — наше медиа <br /> для небезразличных родителей
+				Подписывайтесь <br /> на наше медиа <br /> для небезразличных родителей
 			</div>
 			<div className={styles.links}>
-				<a className={styles.link} href='#'>
+				<a
+					className={styles.link}
+					href='https://t.me/vkurse_vkurse'
+					target='_blank'
+				>
 					Телеграм
 				</a>
-				<a className={styles.link} href='#'>
+				<a
+					className={styles.link}
+					href='https://vk.com/kursnova_profil'
+					target='_blank'
+				>
 					Вконтакте
 				</a>
 			</div>

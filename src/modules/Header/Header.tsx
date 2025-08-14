@@ -52,7 +52,8 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 					</a>
 					<SwitchMode className={styles.desktopMode} />
 					<div className={styles.actions}>
-						<button className={styles.signin}>Войти</button>
+						{/* Don't delete */}
+						{/* <button className={styles.signin}>Войти</button> */}
 						<BurgerButton onClick={() => dispatch(setIsSiderbarOpen(true))} />
 					</div>
 				</header>

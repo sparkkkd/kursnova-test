@@ -14,7 +14,7 @@ export const DesktopTeachers: FC<DesktopTeachersProps> = ({ className }) => {
 	const targetRef = useRef<HTMLDivElement>(null)
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
-		offset: ['start 80%', 'end start'],
+		offset: ['start 80%', '50% start'],
 	})
 
 	const sliderY = useTransform(scrollYProgress, [0, 1], ['10%', '-100%'])

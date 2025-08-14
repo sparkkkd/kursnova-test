@@ -31,9 +31,7 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: {
-									duration: 0.3,
-								},
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.3 }}
 						>
@@ -45,10 +43,7 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 								whileInView={{
 									opacity: 1,
 									x: 0,
-									transition: {
-										duration: 0.3,
-										delay: 0.2,
-									},
+									transition: { duration: 0.3 },
 								}}
 								viewport={{ once: true, amount: 0.3 }}
 							>
@@ -59,10 +54,7 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 								whileInView={{
 									opacity: 1,
 									y: 0,
-									transition: {
-										duration: 0.3,
-										delay: 0,
-									},
+									transition: { duration: 0.3 },
 								}}
 								viewport={{ once: true, amount: 0.1 }}
 							>
@@ -77,7 +69,7 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 								whileInView={{
 									opacity: 1,
 									scale: 1,
-									transition: { duration: 0.3, delay: 0.4 },
+									transition: { duration: 0.3 },
 								}}
 								viewport={{ once: true, amount: 0.3 }}
 							/>
@@ -92,7 +84,6 @@ export const FeaturesTask: FC<FeaturesTaskProps> = ({ className }) => {
 						scale: 1,
 						transition: {
 							duration: 0.5,
-							delay: 0.4,
 							type: 'spring',
 						},
 					}}

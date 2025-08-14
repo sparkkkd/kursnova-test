@@ -27,7 +27,12 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 	const lenis = useLenis()
 
 	useEffect(() => {
-		if (isSidebarOpen) setIsMounted(true)
+		if (isSidebarOpen) {
+			setIsMounted(true)
+			lenis?.stop()
+		} else {
+			lenis?.start()
+		}
 	}, [isSidebarOpen])
 
 	const handleAnimationComplete = () => {
@@ -67,6 +72,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 							exit={{ x: '100%' }}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}
 							onAnimationComplete={handleAnimationComplete}
+							data-lenis-prevent
 						>
 							<motion.div
 								className={styles.close}
@@ -84,7 +90,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
 							<div className={styles.actions}>
 								<SwitchModeSide className={styles.switch} />
-								<button className={styles.enter}>Войти</button>
+								{/* Don't delete */}
+								{/* <button className={styles.enter}>Войти</button> */}
 							</div>
 
 							<ul className={styles.list}>
@@ -124,9 +131,10 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 									Попробовать kursnova за 0 ₽
 								</button>
 
-								<button className={clsx(styles.enter, styles.mobileEnter)}>
+								{/* Don't delete */}
+								{/* <button className={clsx(styles.enter, styles.mobileEnter)}>
 									Войти
-								</button>
+								</button> */}
 							</div>
 						</motion.aside>
 					</>

@@ -7,6 +7,7 @@ import { setIsModalOpen, setIsModalSuccess } from '../../store/slices/uiSlice'
 import { useWindowSize } from 'usehooks-ts'
 
 import styles from './Modal.module.sass'
+import { useLenisScrollLock } from '../../hooks/useLenisScrollLock'
 
 interface ModalProps extends React.PropsWithChildren {
 	className?: string
@@ -20,8 +21,15 @@ export const Modal: FC<ModalProps> = ({ className, children }) => {
 
 	const { width } = useWindowSize()
 
+	const { lock, unlock } = useLenisScrollLock()
+
 	useEffect(() => {
-		if (isModalOpen) setIsMounted(true)
+		if (isModalOpen) {
+			setIsMounted(true)
+			lock()
+		} else {
+			unlock()
+		}
 	}, [isModalOpen])
 
 	const handleAnimationComplete = () => {

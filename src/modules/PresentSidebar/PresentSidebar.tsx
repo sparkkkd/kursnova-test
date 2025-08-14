@@ -13,11 +13,13 @@ import {
 	successPresentAction,
 } from '../../store/slices/uiSlice'
 import { useWindowSize } from 'usehooks-ts'
+import { Link } from 'react-router-dom'
 
 import PresentImg from '../../assets/parents/cards/cards-sidebar-img.png'
 import CloseIcon from '../../assets/close.svg?react'
 
 import styles from './PresentSidebar.module.sass'
+import { useLenis } from 'lenis/react'
 
 interface PresentSidebarProps {
 	className?: string
@@ -31,6 +33,8 @@ export const PresentSidebar: FC<PresentSidebarProps> = ({}) => {
 
 	const { width } = useWindowSize()
 
+	const lenis = useLenis()
+
 	const {
 		register,
 		handleSubmit,
@@ -40,7 +44,12 @@ export const PresentSidebar: FC<PresentSidebarProps> = ({}) => {
 	})
 
 	useEffect(() => {
-		if (isPresentOpen) setIsMounted(true)
+		if (isPresentOpen) {
+			setIsMounted(true)
+			lenis?.stop()
+		} else {
+			lenis?.start()
+		}
 	}, [isPresentOpen])
 
 	const handleAnimationComplete = () => {
@@ -76,6 +85,7 @@ export const PresentSidebar: FC<PresentSidebarProps> = ({}) => {
 
 					<motion.div
 						className={styles.content}
+						data-lenis-prevent
 						onClick={(e) => e.stopPropagation()}
 						initial={{
 							x: width > 700 ? '100%' : '0%',
@@ -137,7 +147,10 @@ export const PresentSidebar: FC<PresentSidebarProps> = ({}) => {
 						</form>
 
 						<span className={styles.privacy}>
-							Нажимая на кнопку, вы соглашаетесь с <a href='#'>условиями </a>
+							Нажимая на кнопку, вы соглашаетесь с{' '}
+							<Link to='/personal-data' target='_blank'>
+								условиями
+							</Link>{' '}
 							сбора и обработки данных
 						</span>
 

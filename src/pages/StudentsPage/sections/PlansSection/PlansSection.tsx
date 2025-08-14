@@ -12,7 +12,7 @@ interface PlansSectionProps {
 
 export const PlansSection: FC<PlansSectionProps> = ({ className }) => {
 	return (
-		<section className={clsx(styles.section, className)}>
+		<section className={clsx(styles.section, className)} id='price'>
 			<Container>
 				<div className={styles.wrapper}>
 					<h3 className={styles.title}>О тарифах</h3>

@@ -16,11 +16,15 @@
 	right: 0
 	min-width: 480px
 	height: 100dvh
+	min-height: 100dvh
 	background-color: #14141a
 	box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1)
 	z-index: 1002
 	display: flex
 	flex-direction: column
+	overflow-y: auto
+	touch-action: auto
+	overscroll-behavior: contain
 
 .close
 	width: 40px
@@ -68,6 +72,7 @@
 		display: block
 
 .profit
+	padding-top: 20px
 	margin-top: auto
 	display: flex
 	flex-direction: column
@@ -78,7 +83,7 @@
 	margin-left: auto
 	margin-right: auto
 	margin-bottom: 32px
-	width: 350px
+	width: 265px
 	object-fit: contain
 
 .button

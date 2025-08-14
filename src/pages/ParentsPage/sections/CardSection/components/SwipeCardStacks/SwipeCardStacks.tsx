@@ -50,7 +50,7 @@ export const SwipeCardStacks: FC<SwipeCardStacksProps> = ({}) => {
 							}}
 							onDragEnd={(_, info: PanInfo) => {
 								if (!isTop) return
-								if (Math.abs(info.offset.x) > 150) {
+								if (Math.abs(info.offset.x) > 30) {
 									setSwipeX(info.offset.x)
 									handleSwipe()
 								} else {

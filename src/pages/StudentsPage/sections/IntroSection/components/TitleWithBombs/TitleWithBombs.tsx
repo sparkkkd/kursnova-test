@@ -7,7 +7,6 @@ import { ScrollDown } from '../../../../../../components/ScrollDown/ScrollDown'
 
 import BombImage_1 from '../../../../../../assets/students/intro/bomb-1.png'
 import BombImage_2 from '../../../../../../assets/students/intro/bomb-2.png'
-// import { MobileBombsAnimation } from '../MobileBombsAnimation/MobileBombsAnimation'
 
 import styles from './TitleWithBombs.module.sass'
 
@@ -56,8 +55,6 @@ export const TitleWithBombs: FC<TitleWithBombsProps> = ({ className }) => {
 					)}
 				</motion.h1>
 			</div>
-
-			{/* {width <= 815 && <MobileBombsAnimation />} */}
 
 			{width > 815 && (
 				<video className={styles.video} autoPlay muted preload='auto'>

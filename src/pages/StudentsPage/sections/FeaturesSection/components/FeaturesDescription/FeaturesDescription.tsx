@@ -9,9 +9,6 @@ export interface FeaturesDescriptionProps {
 	icon: JSX.Element
 	title: string
 	description: string | JSX.Element
-	delayIcon?: number
-	delayTitle?: number
-	delayText?: number
 }
 
 export const FeaturesDescription: FC<FeaturesDescriptionProps> = ({
@@ -19,57 +16,18 @@ export const FeaturesDescription: FC<FeaturesDescriptionProps> = ({
 	icon,
 	title,
 	description,
-	delayIcon,
-	delayText,
-	delayTitle,
 }) => {
 	return (
-		<div className={clsx(styles.wrapper, className)}>
-			<motion.div
-				className={styles.icon}
-				initial={{ opacity: 0, y: -100 }}
-				whileInView={{
-					opacity: 1,
-					y: 0,
-					transition: {
-						duration: 0.3,
-						delay: delayIcon,
-					},
-				}}
-				viewport={{ once: true, amount: 0.3 }}
-			>
-				{icon}
-			</motion.div>
-			<motion.div
-				className={styles.title}
-				initial={{ opacity: 0, y: 100 }}
-				whileInView={{
-					opacity: 1,
-					y: 0,
-					transition: {
-						duration: 0.3,
-						delay: delayTitle,
-					},
-				}}
-				viewport={{ once: true, amount: 0.3 }}
-			>
-				{title}
-			</motion.div>
-			<motion.div
-				className={styles.description}
-				initial={{ opacity: 0, y: 100 }}
-				whileInView={{
-					opacity: 1,
-					y: 0,
-					transition: {
-						duration: 0.3,
-						delay: delayText,
-					},
-				}}
-				viewport={{ once: true, amount: 0.3 }}
-			>
-				{description}
-			</motion.div>
-		</div>
+		<motion.div
+			className={clsx(styles.wrapper, className)}
+			initial={{ opacity: 0, y: 100 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.3 }}
+			viewport={{ once: false, amount: 0.3 }}
+		>
+			<motion.div className={styles.icon}>{icon}</motion.div>
+			<motion.div className={styles.title}>{title}</motion.div>
+			<motion.div className={styles.description}>{description}</motion.div>
+		</motion.div>
 	)
 }

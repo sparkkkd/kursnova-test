@@ -61,7 +61,7 @@ export const PersonalData: FC<PersonalDataProps> = ({ className }) => {
 							)}
 
 							{TABLE_DATA.map(({ left, right }) => (
-								<div className='table-row'>
+								<div className='table-row' key={left}>
 									<div className='table-left'>{left}</div>
 									<div className='table-right'>{right}</div>
 								</div>

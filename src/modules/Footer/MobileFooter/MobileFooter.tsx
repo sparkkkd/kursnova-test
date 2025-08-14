@@ -34,7 +34,7 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: { duration: 0.3, delay: 0.1 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
 						>
@@ -45,7 +45,7 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: { duration: 0.3, delay: 0.2 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
 						>
@@ -56,60 +56,60 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: { duration: 0.3, delay: 0.3 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
 						>
 							с kursnova
 						</motion.div>
 						<motion.img
-							initial={{ opacity: 0, y: 100 }}
-							whileInView={{
-								opacity: 1,
-								y: 0,
-								transition: { duration: 0.3, delay: 0.4 },
-							}}
-							viewport={{ once: true, amount: 0.1 }}
 							className={styles.bot}
 							src={Bot}
 							alt='Bot'
-						/>
-						<motion.img
 							initial={{ opacity: 0, y: 100 }}
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: { duration: 0.3, delay: 0.5 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
+						/>
+						<motion.img
 							className={styles.greenBall}
 							src={GreenBall}
 							alt='GreenBall'
+							initial={{ opacity: 0, y: 100 }}
+							whileInView={{
+								opacity: 1,
+								y: 0,
+								transition: { duration: 0.3 },
+							}}
+							viewport={{ once: true, amount: 0.1 }}
 						/>
 						<motion.img
+							className={styles.eurica}
+							src={Eurica}
+							alt=''
 							initial={{ opacity: 0, y: 100 }}
 							whileInView={{
 								opacity: 1,
 								y: 0,
 								rotateZ: -30,
-								transition: { duration: 0.3, delay: 0.6 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
-							className={styles.eurica}
-							src={Eurica}
-							alt='Eurica'
 						/>
 						<motion.img
+							className={styles.horse}
+							src={Horse}
+							alt='Horse'
 							initial={{ opacity: 0, y: 100 }}
 							whileInView={{
 								opacity: 1,
 								y: 0,
-								transition: { duration: 0.3, delay: 0.7 },
+								transition: { duration: 0.3 },
 							}}
 							viewport={{ once: true, amount: 0.1 }}
-							className={styles.horse}
-							src={Horse}
-							alt='Horse'
 						/>
 					</h3>
 					<motion.div
